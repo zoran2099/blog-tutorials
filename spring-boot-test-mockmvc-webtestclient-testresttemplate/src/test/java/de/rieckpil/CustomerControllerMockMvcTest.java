@@ -24,6 +24,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * O MockMvc tem um output com mais informações
+ */
 @WebMvcTest(CustomerController.class)
 class CustomerControllerMockMvcTest {
 

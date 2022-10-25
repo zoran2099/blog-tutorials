@@ -3,6 +3,7 @@ package de.rieckpil;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,7 +24,7 @@ public class CustomerController {
   public List<Customer> getAllCustomers() {
     return CUSTOMER_LIST;
   }
-
+//TODO Como se usa isso? UriComponentsBuilder uriComponentsBuilder
   @PostMapping
   public ResponseEntity<Void> createCustomer(
     @RequestBody Customer customer,
@@ -36,4 +37,6 @@ public class CustomerController {
         .buildAndExpand(customer.id()).toUri())
       .build();
   }
+
+
 }
